@@ -1,7 +1,5 @@
 package com.skilldistillery.application;
 
-import java.util.Set;
-
 import com.skilldistillery.entities.Customer;
 import com.skilldistillery.entities.Film;
 import com.skilldistillery.entities.Store;
@@ -16,11 +14,10 @@ public class RentalStoreQuizApp {
 		
 		// create a store instance
 		Store s = rents.createStore();
-
 		// Fred Flintstone is excited to join the store as a Customer.
 		// Create Fred Flintstone as a customer
 		Customer ct = rents.createCustomer("Fred", "Flintstone");
-
+		
 		// Fred rents the movie: "Booleans: even if you are wrong, you are only off by a bit"
 		//  ... add the film to Fred's collection of rentals
 		ct.addRental(new Film("Booleans: even if wrong, you're only off by a bit"));
@@ -41,21 +38,25 @@ public class RentalStoreQuizApp {
 
 	public Store createStore() {
 		// TODO: implement the method
-		return null;
+		Store s = new Store();
+		return s;
 	}
 
 	public Customer createCustomer(String fn, String ln) {
 		// TODO: implement the method
-		return null;
+		Customer ct = new Customer();
+		ct.setFirstName(fn);
+		ct.setLastName(ln);
+		return ct;
 	}
 
 	public void registerCustomerAtStore(Store st, Customer ct) {
 		// TODO: implement the method
-		
+		st.addCustomer(ct);
 	}
 	
 	public void displayData (Store s) {
 		// TODO: implement the method
-	
+		s.displayAllData();
 	}
 }

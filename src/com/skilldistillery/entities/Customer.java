@@ -9,7 +9,7 @@ public class Customer {
 	private String firstName;
 	private String lastName;
 	
-	private List<Film> rentals;
+	private List<Film> rentals = new ArrayList<Film>();
 	
 	public Customer(String firstName, String lastName) {
 		this(numCustomers+1, firstName, lastName);
